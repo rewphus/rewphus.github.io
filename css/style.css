@@ -26,6 +26,15 @@ p {
   color: #26a69a;
 }
 
+.preloadimage{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 .parallax-container {
   min-height: 680px;
   line-height: 0;

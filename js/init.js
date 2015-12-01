@@ -4,6 +4,7 @@
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
     $('.scrollspy').scrollSpy();
+    $(".preloadimage").css("opacity", 0);
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
