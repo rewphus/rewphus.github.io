@@ -36,7 +36,7 @@ p {
 }
 
 .parallax-container {
-  min-height: 680px;
+  min-height: 880px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
@@ -358,7 +358,7 @@ footer.page-footer {
 /*-----------ScrollMagic--------------*/
 
 section {
-  height: 500px;
+  height: 600px;
   position: relative;
   text-align: center;
 }
@@ -375,7 +375,12 @@ section .innerText {
   left: 60%;
   transform: translate(-100px, -50%);
   text-align: left;
-  z-index: -1;
+  /*z-index: -1;*/
+}
+
+#two, #four{
+  background-color: #D32F2F;
+  /*z-index: 0;*/
 }
 
 .xp-text{
@@ -411,15 +416,38 @@ section .innerText {
   background-color: #999;
   background-image: url("../images/fallout4.gif");
   /*opacity: 0;*/
+  z-index: 0;
 }
 
-.manBack, .controller, .manFront, .macbook, .gameGif, .landingGraphs{
+.manBack, .controller, .manFront{
   position: fixed;
   top: 50%;
   left: 10%;
   display: inline;
   opacity: 0;
-  /*z-index: 11;*/
+  z-index: 0;
+}
+
+.gameGif, .landingGraphs {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  display: inline;
+  opacity: 0;
+  z-index: 4;
+}
+
+/*.landingActivity, .landingNotifications{
+  z-index:4;
+}*/
+
+.macbook{
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  display: inline;
+  opacity: 0;
+  z-index:2;
 }
 
 .landingGraphs{
@@ -438,13 +466,13 @@ section .innerText {
   /*width:400px;*/
 }
 
-.landingActivity img, .landingNotifications img{
+/*.landingActivity img, .landingNotifications img{
   position: relative;
     left: 10%;
     height: 400px;
     z-index: 100;
-    /*opacity: 0;*/
-}
+    /*opacity: 0;
+}*/
 
 .landingMask
 {
@@ -456,6 +484,7 @@ section .innerText {
   width: 500px;
   /*opacity:0;*/
   overflow: hidden;
+  z-index:3;
 }
 
 /* Centered content of the ScrollMagic card */
@@ -510,7 +539,7 @@ section .innerText {
 
 /* FOOTER */
 #landing-sign-up {
-	background: #2f2f2f;
+	background: #D32F2F;
 	width: 100%;
 	padding-top: 100px;
 	padding-bottom: 100px;
