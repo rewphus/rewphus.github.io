@@ -378,10 +378,6 @@ section .innerText {
   /*z-index: -1;*/
 }
 
-#two, #four{
-  background-color: #D32F2F;
-  /*z-index: 0;*/
-}
 
 .xp-text{
   top: -140px;
@@ -466,13 +462,13 @@ section .innerText {
   /*width:400px;*/
 }
 
-/*.landingActivity img, .landingNotifications img{
+.landingActivity img, .landingNotifications img{
   position: relative;
     left: 10%;
     height: 400px;
     z-index: 100;
-    /*opacity: 0;
-}*/
+    /*opacity: 0;*/
+}
 
 .landingMask
 {

@@ -1,3 +1,4 @@
+/* global $macbook */
 (function($) {
   var wh = window.innerHeight,
   $signup = $('.landing-sign-up'),
@@ -42,7 +43,7 @@
   monitorIntroTl
     .to($avatar, .5, {autoAlpha: .5},'1')
     .from($monitor, .5, {yPercent: 200,xPercent: 100, ease: Power4.easeInOut})
-    .to($signup, .5, {yPercent: 180, xPercent: 180}, '1');
+    .to($signup, .5, {yPercent: 140, xPercent: 180}, '1');
 
   // monitor back to stylesheet position
   new ScrollMagic.Scene({
@@ -108,47 +109,44 @@
   // Animate letter A out, letter B in and fade in content of section 3
   var monitorComputer2 = new TimelineMax();
   monitorComputer2
-        .to($graphs, 1,{yPercent: -180, scale: 0},'1')
-      .to($macbook, 1, {yPercent: -160, scale: .25}, '1')
-
-      .to($signup, .5, {autoAlpha: 0}, '1')
-      .to($lifebar, 1, {yPercent: -800, autoAlpha: 0, scale: .9}, '1');
-
-      // .fromTo($activity, .75, {yPercent: 100, autoAlpha: 1}, {yPercent: -10, autoAlpha: 1}, '2');
+       .to($graphs, 1,{scale: 0},'1')
+      // .to($signup, .5, {autoAlpha: 0}, '1')
+      .to($lifebar, 1, {yPercent: -80, autoAlpha: 0, scale: .9}, '1')
+      .fromTo($activity, 3, {yPercent: 100, autoAlpha: 1}, {yPercent: -10, autoAlpha: 1}, '1');
 
 
 new ScrollMagic.Scene({
-  triggerElement: $('.innerS2 h2')[0],
-  duration: '180%'
+  triggerElement: $('.innerS3 h2')[0],
+  duration: '60%'
 })
 .setTween(monitorComputer2)
 .addTo(ctrl);
 
 // Animate letter A out, letter B in and fade in content of section 3
-// var monitorComputer3 = new TimelineMax();
-// monitorComputer3
-//
-//     .fromTo($notifications, .5, {yPercent: 100, scale: .9}, {yPercent: -120, scale: .9}, '0')
-//     .to($activity, .5, {yPercent: -60}, '0');
-//
-// new ScrollMagic.Scene({
-// triggerElement: $('.innerS4 h2')[0],
-// duration: '100%'
-// })
-// .setTween(monitorComputer3)
-// .addTo(ctrl);
+var monitorComputer3 = new TimelineMax();
+monitorComputer3
+  
+    .fromTo($activity, 5, {yPercent: 800, autoAlpha: 1}, {yPercent: -100}, '3')
+    .fromTo($notifications, 3, {yPercent: 100, scale: .9}, {yPercent: -120, scale: .9}, '2');
+
+new ScrollMagic.Scene({
+triggerElement: $('.innerS4 h2')[0],
+duration: '60%'
+})
+.setTween(monitorComputer3)
+.addTo(ctrl);
 
 // Animate letter A out, letter B in and fade in content of section 3
 var monitorComputer4 = new TimelineMax();
 monitorComputer4
     // .to($activity, .1, {autoAlpha: 0, scale: 0}, '0')
-    // .to($notifications, 1, {yPercent: -600, autoAlpha:0, scale: 0}, '0')
-    .to($macbook, 1, {yPercent: -160, scale: 0}, '0')
-    .to($signup, 1, {autoAlpha: 0}, '0');
+    .to($notifications, 1, {yPercent: -600, autoAlpha:0, scale: 0}, '1')
+    .to($macbook, 1, {yPercent: -160, scale: 0}, '2')
+    .to($signup, 1, {autoAlpha: 0}, '1');
 
 new ScrollMagic.Scene({
-triggerElement: $('.landing-sign-up')[0],
-duration: '20%'
+triggerElement: $('.innerS5 h2')[0],
+duration: '10%'
 })
 .setTween(monitorComputer4)
 .addTo(ctrl);
